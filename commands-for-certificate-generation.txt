@@ -1,0 +1,6 @@
+keytool -genkey -keystore myCertificate -keyalg RSA
+
+java -Djavax.net.ssl.keyStore=myCertificate -Djavax.net.ssl.keyStorePassword=schaud14 Server
+
+java -Djavax.net.ssl.trustStore=myCertificate -Djavax.net.ssl.trustStorePassword=schaud14 Client
+
